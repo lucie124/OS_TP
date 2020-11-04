@@ -12,9 +12,6 @@ do
         OLD)
             continue
             ;;
-        $0)
-            continue
-            ;;
         *)
             cp -r $fname ./OLD
             ;;
@@ -30,11 +27,10 @@ do
     if [ -d "$file" ] # is a repository
         then
         continue
-    else # not a repertory
+    else # not a repository
         pname="${file%.*}"
         extension="${file##*.}"
         newfile=$( echo $pname$DATE\.$extension)
-        echo $newfile
         mv $file $newfile
     fi
 done

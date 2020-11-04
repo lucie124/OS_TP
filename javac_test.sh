@@ -2,7 +2,7 @@
 
 file=$1
 
-case $1 in
+case $file in
     *.java)
         break
         ;;
@@ -14,7 +14,7 @@ esac
 
 
 
-tc=$( javac $file -d ./bin 2>&1 | wc -l )
+tc=$( javac $file 2>&1 | wc -l )
 
 if [ $tc -eq 0 ]; then
     echo "\033[32m$file : compilé \033[37m"
