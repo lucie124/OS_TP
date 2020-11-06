@@ -1,5 +1,5 @@
 #!/bin/bash
-MYDIR=`pwd`
+MYDIR=$( pwd)
 if [ $# -eq 0 ]; then
     echo "\033[31mPlease enter a repository\033[0m \033[37m"
     exit 2

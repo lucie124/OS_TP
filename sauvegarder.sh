@@ -22,7 +22,7 @@ cd OLD
 DATE=$(date +\#%Y-%m-%d)
 
 #rename all files
-for file in `find . `
+for file in $( find . )
 do
     if [ -d "$file" ] # is a repository
         then
@@ -36,7 +36,7 @@ do
 done
 
 #rename all repositories
-for file in `find . -type d` # all repositories
+for file in $( find . -type d ) # all repositories
 do
     newfile=$( echo $file$DATE)
     mv $file $newfile 2> /dev/null

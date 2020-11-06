@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function bred(){
-    echo "\033[31m\033[01m$1\033[0m"
+    echo "\033[31m$1\033[0m"
 }
 
 function green(){
